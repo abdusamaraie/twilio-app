@@ -1,0 +1,21 @@
+{
+  "name": "twilioapp",
+  "version": "1.0.0",
+  "description": "simple phone lookup api with twilio",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Abdu samaraie",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "libphonenumber-js": "^1.7.30",
+    "twilio": "^3.39.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
