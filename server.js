@@ -6,6 +6,7 @@ const express = require("express"),
   PhoneNumberParser = require("libphonenumber-js");
 
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //twilio client
