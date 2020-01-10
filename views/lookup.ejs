@@ -1,54 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Lookup</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="container py-5 mt-5">
-      <div class="row">
-        <div class="col-md-6 ml-auto py-5">
-          <form action="/result" method="POST">
-            <div class="form-group">
-              <label for="number">Number: </label>
-              <input
-                type="text"
-                name="number"
-                id="number"
-                class="form-control"
-              />
-            </div>
-            <button class="btn btn-primary btn-lg btn-block" type="submit">
-              Lookup
-            </button>
-          </form>
+<%- include('partials/header') %>
+
+
+
+
+<div class="container py-5 ">
+  <div class="row">
+    <div class="col-md-6 py-2 mb-4 m-auto ">
+      <div class="card card-body bg-light search">
+        <form action="/result" method="POST">
+          <div class="form-group">
+            <label for="number">Lookup Number: </label>
+            <input type="text" name="number" id="number" class="form-control" />
+            <small>e.g. +18185551212, +1 (818) 555-1212</small>
+          </div>
+          <button class="btn btn-outline-dark btn-lg btn-block" type="submit">
+           <i class="fas fa-search" aria-hidden="true"></i> Lookup
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-6 m-auto">
+      <div class="card">
+        <div class="card-header text-center">
+          <h1 class="h4">Over 1,000,000 Successful Phone Lookups</h1>
+        </div>
+        <div class="card-body">
+          Stop Paying, Use Our FREE Reverse Phone Lookup. A reverse phone number lookup will let you
+          see exactly who it is that was trying to contact you. From there you can decide, whether to open the lines of
+          communication with the caller. Most paid services charge between $4.95 and $14.95 to do this, and that is for
+          just a single search. At Reverse-PhoneLookup.net you can not only lookup phone numbers as many times as you
+          need to but we offer our service completely free of charge. So you can stop paying and start searching.
         </div>
       </div>
     </div>
 
-    <!-- scripts -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-</html>
+  </div>
+</div>
+
+
+<section id="features" class="my-5 text-center">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-eye fa-4x rounded-circle bg-light mb-3"></i>
+          <h3>SNEAKY..</h3>
+          <h5 class="text-muted">Who?</h5>
+          <p>Have a missed call? Need to know whose number is this? Spy Dialer is the newest, fastest, SNEAKIEST free reverse phone number lookup on the web. It works with cell phones, landlines and email addresses. Even non-published numbers! Try our reverse cell phone lookup by voicemail for a great cell number search!</p>
+      
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-balance-scale fa-4x rounded-circle mb-3 bg-light"></i>
+          <h3>BUT LEGAL</h3>
+          <h5 class="text-muted">And Legit</h5>
+<p>We use publicly available information, social media and user-contributed address books to provide names and photos for unknown or suspicious phone number lookup. Need a catfish phone number search? This is stuff you would never find in a phone book -- or .com directory websites based on phone books, white pages or yellow pages</p>      
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <i class="fas fa-hand-holding-usd fa-4x rounded-circle  mb-3 bg-light"></i>
+          <h3>FREE</h3>
+          <h5 class="text-muted">For Ever</h5>
+<p>Finally, there's a 100% totally free phone number lookup by name at no charge. This is better than Caller ID or cell phone trackers or reverse phone detective or Google phone number lookup! Is there a free reverse phone lookup service? Yes! Get a minimum of 25 free phone number searches a day -- no membership required!</p>      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="container">
+  <div class="row my-5">
+    <div class="col">
+      <div class="ad mb-5">
+        ad banner
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<%- include('partials/footer') %>
