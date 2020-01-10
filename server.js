@@ -28,30 +28,46 @@ app.get('/lookup', (req, res) => {
 //create result
 app.post('/result', (req, res) => {
 	//get data from form and add it to numbers array
-	const number = req.body.number;
+	let number = req.body.number;
+	if (number[0] !== '+') {
+		number = `+1${number}`;
+	}
+	let phoneNumber = PhoneNumberParser.parsePhoneNumberFromString(number);
 
-	const phoneNumber = PhoneNumberParser.parsePhoneNumberFromString(number);
-	//phoneNumber.format("INTERNATIONAL").replace(/\s/g, "")
+	if (phoneNumber) {
+		//phoneNumber.format('INTERNATIONAL').replace(/\s/g, '');
+		console.log(phoneNumber.number);
+		number = phoneNumber.number;
+	} else {
+		number = 'null';
+	}
+
 	//lookup caller name by number
-	// client.lookups
-	//   .phoneNumbers(number)
-	//   .fetch({ type: ["caller-name"]})
-	//   .then(phone_number => {
-	//     names.push(phone_number.callerName.caller_name);
-	//   })
-	//   .catch(message => {
-	//     console.log(message);
-	//   });
-	//testing
-	names.push('Abdu');
-	//redirect back to get page
-	res.redirect('/result');
+	client.lookups
+		.phoneNumbers(number)
+		.fetch({ countryCode: 'US', type: [ 'caller-name' ] })
+		.then((phone_number) => {
+			if (phone_number.callerName.caller_name !== null) {
+				console.log(phone_number);
+				names.push(phone_number.callerName.caller_name);
+			} else {
+				names.push('No Name Found!!');
+			}
+			//redirect back to get page
+			res.redirect('/result');
+		})
+		.catch((message) => {
+			console.log(message);
+			names.push('Wrong number format. Go back and try again!');
+			//redirect back to get page
+			res.redirect('/result');
+		});
 });
 
 // show result
 app.get('/result', (req, res) => {
 	if (names) {
-		var name = names[0];
+		var name = names.pop();
 		res.render('result', { name: name });
 	} else {
 		console.log('empty array');
