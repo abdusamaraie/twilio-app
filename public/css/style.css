@@ -10,18 +10,6 @@ body {
 #main-header {
 	box-shadow: 3px 3px 10px #888;
 }
-.subheader {
-	box-shadow: 3px 3px 10px #888;
-	color: #fff;
-	margin: 0 auto 16px auto;
-	width: 80%;
-	font-size: 14px;
-	padding: 1px;
-	min-height: 50px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
 
 #main-footer {
 	background-color: #f4f4f4;
@@ -66,9 +54,9 @@ body {
 }
 
 .ad {
-	min-width: 320px;
-	min-height: 50px;
-	border: 1px solid #3a3a3a;
+	min-width: 90%;
+	min-height: 90px;
+	border: 1px solid #ccc;
 }
 
 #features i {
