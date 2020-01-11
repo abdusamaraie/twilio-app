@@ -54,7 +54,7 @@ body {
 }
 
 .ad {
-	min-width: 90%;
+	min-width: 100%;
 	min-height: 90px;
 	border: 1px solid #ccc;
 }
