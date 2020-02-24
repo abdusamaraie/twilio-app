@@ -1,74 +1,75 @@
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 body {
-	font-size: 14px;
-	font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
 #main-header {
-	box-shadow: 3px 3px 10px #888;
+  box-shadow: 3px 3px 10px #888;
 }
 
 #main-footer {
-	background-color: #f4f4f4;
-	color: #444;
-	padding: 0;
-	font-size: 14px;
-	margin-top: 10px;
+  background-color: #f4f4f4;
+  color: #444;
+  padding: 0;
+  font-size: 14px;
+  margin-top: 10px;
 }
 #main-footer ul {
-	display: flex;
-	margin-bottom: 0;
-	padding-left: 0;
-	align-items: center;
-	justify-content: space-around;
-	list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
 }
 
 #main-footer ul li {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #main-footer ul li i {
-	font-size: 30px;
+  font-size: 30px;
 }
 
 #main-footer .col:hover {
-	background-color: #eee;
+  background-color: #eee;
 }
 
 #main-footer a {
-	text-decoration: none;
-	color: #3a3a3a;
+  text-decoration: none;
+  color: #3a3a3a;
 }
 #main-footer a:hover {
-	color: #007bff;
+  color: #007bff;
 }
 #main-footer a:active {
-	color: #026bdb;
+  color: #026bdb;
 }
 
 .ad {
-	min-width: 100%;
-	min-height: 70px;
-	padding: 0;
-	border: 1px solid #ccc;
+  min-width: 100%;
+  max-width: 289px;
+  min-height: 70px;
+  padding: 0;
+  border: 1px solid #ccc;
 }
 
 #features i {
-	position: relative;
-	bottom: 10px;
-	margin-top: -40px;
-	padding-top: 25PX;
-	width: 110px;
-	height: 110px;
-	border: #3a3a3a 1px solid;
+  position: relative;
+  bottom: 10px;
+  margin-top: -40px;
+  padding-top: 25px;
+  width: 110px;
+  height: 110px;
+  border: #3a3a3a 1px solid;
 }
 .search {
-	background: rgba(0, 123, 255, 0.8);
+  background: rgba(0, 123, 255, 0.8);
 }
