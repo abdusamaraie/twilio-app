@@ -13,7 +13,8 @@
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "libphonenumber-js": "^1.7.30",
-    "twilio": "^3.39.1"
+    "twilio": "^3.39.1",
+    "url-parse": "^1.4.7"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
